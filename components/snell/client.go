@@ -62,7 +62,7 @@ func (s *clientSession) Read(b []byte) (int, error) {
 	if s.buffer[0] == ResponseTunnel {
 		return s.Conn.Read(b)
 	} else if s.buffer[0] != ResponseError {
-		return 0, errors.New("Command not support")
+		return 0, errors.New("command not support")
 	}
 
 	// ResponseError

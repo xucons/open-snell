@@ -39,7 +39,7 @@ func (p *snellPool) Get() (net.Conn, error) {
 			pool: p,
 		}, nil
 	}
-	return nil, errors.New("Invalid Type")
+	return nil, errors.New("invalid type")
 }
 
 func (p *snellPool) Close() {
